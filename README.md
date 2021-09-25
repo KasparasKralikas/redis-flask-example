@@ -17,7 +17,7 @@ Flask app by default starts on localhost port 5000 and has the following endpoin
 - **GET: localhost:5000/get_todos** - returns all the todos in a JSON format;
 - **GET: localhost:5000/get_todos/_id_** - returns the todo with a specified **_id_** in a JSON format.
 
-### Caching benefits
+### Caching Benefits
 
 Caching is used to store the results of requests that require expensive operations. So the next time the same request can be served much faster. A popular choice for such a task as showcased in this example is Redis in-memory cache that can store key-value pairs. Cache often serves as an intermittent layer between the application serving the request and the entity that provides the requested resource. When the request is received that requires a particular resource, the application checks the cache first for the said resource. If the resource exists in the cache, it is simply returned. If the cache doesn't contain the requested resource, that resource is retrieved the expensive way from the database or some sort of service or/and is computed by the application. Then the resource is stored in the cache for a set amount of time.
 
